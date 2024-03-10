@@ -1,0 +1,120 @@
+/* ESTILO GERAL */
+*{
+	margin: 0;
+	padding: 0;
+	box-size: border-box;
+	font-family: 'Poppins', sans-serif; /* fonte instalada */
+}
+
+
+body {
+	background-color: #000;
+	height: 100vh; /* altura */
+}
+
+.interface{
+	max-width: 1280px; /* largura maxima */
+	margin: 0 auto; /* centralizada */
+}
+
+.flex{
+	display: flex; /* imagem alinhada a direita */
+}
+
+.btn-contato button{
+	padding: 10px 40px; /* aumenta o botão */
+	font-size: 18px; /* tamanho da fonte */
+	font-weight: 600; /* peso da fonte */
+	background-color: #00ff08; /* cor do botão */
+	border: 0; /* tira a borda do botão */
+	border-radius: 30px; /* bordas arrendondadas botão */
+	cursor: pointer; /* cursor dedinho */
+	transition: .2s;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+	padding: 40px 4%; /* titulo não ficar colado */
+}
+
+header > .interface{
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* deixa objetos distantes um do outro */
+}
+
+header a{
+	color: #5d5d5d; /* cor branca */
+	text-decoration: none; /* tira o sublinhado das linhas */
+	display: inline-block; /* propriedade inline e tbm block para funcionar o zoom */
+	transition: .2s; /* tempo zoom */
+}
+
+header a:hover{ /* passar cursor */
+	color: #fff; /* fonte fica branca */
+	transform: scale(1.05); /* zoom */
+}
+
+header nav ul{
+	list-style-type: none; /* tira as bolinhas da lista */
+}
+
+header nav ul li{
+	display: inline-block; /* deixa as linhas lado a lado */
+	padding: 0 40px;  /* espaçamento entre as linhas */
+}
+
+.btn-contato button:hover{
+	box-shadow: 0px 0px 8px #00ff08;
+	transform: scale(1.05); 
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+	padding: 40px 4%; /* espaço */
+
+}
+
+section.topo-do-site .flex{
+	align-items: center; /* alinha o texto */
+	justify-content: center; /* alinha o texto */
+	gap: 90px; /* espaçamento */
+}
+
+.topo-do-site h1{
+	color: #fff;
+	font-size: 42px;
+	line-height: 40px; /* espaço entre as linhas */
+}
+
+.topo-do-site .txt-topo-site h1 span{
+	color: #00FF08; /* ponto verde */
+}
+
+.topo-do-site .txt-topo-site p{
+	color: #fff;
+	margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+	position: relative; /* top só funciona se gor relative */
+	animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+.whats {
+            position: fixed;
+            bottom: 30px; /* espaço do canto da tela */
+            right: 30px; /* espaço do canto da tela */
+            z-index: 9999;
+        }  /*Consegui sozinhaaa*/
+
+@keyframes flutuar{ /* animação */
+	0%{
+		top: 0;
+
+	}
+	100%{
+		top: 30px;
+	}
+}
